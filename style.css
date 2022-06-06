@@ -69,6 +69,7 @@ body{
 }
 .address-bar{
     width: 5rem;
+    text-align: center;
 }
 .formula-bar{
     width: calc(100vw - 1.3rem - 5rem - 0.7rem - 0.7rem - 0.7rem);
@@ -87,33 +88,49 @@ body{
     height: 2rem;
     width: 2rem;
     background-color: #747d8c;
+    position: fixed;
+    z-index: 1;/*to use z-index, using the position property is mandatory*/ 
 }
-.address-col-cont{
+.address-col-cont{/*parent div containing row numbers*/ 
     width: 2rem;
+    position: sticky;
+    left: 0;
+    top: 2rem;
 }
-.address-row-cont{
+.address-row-cont{/*parent div containing col alphabets*/ 
     height: 2rem;
     display: flex;
+    position: sticky;
+    top: 0;
+    left: 2rem;
 }
-.cells-cont{
+.cells-cont{/*the whole parent div iside grid-cont container except the dummy cell and row count*/
     position: absolute;
     top: 0;
     left: 2rem;
 }
-.address-col{
+.address-col{/*1,2,3.4....*/
     width: 2rem;
     height: 2rem;
     text-align: center;
     border: 1px solid #dfe4ea;
 }
-.address-row{
+.address-row{/*A,B,C,D....*/
     height: 2rem;
     width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #dfe4ea;
-
+}
+.row-cont{/* the cells are inside this */
+    display: flex;
+}
+.cell{
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid #dfe4ea;
+    outline: none;
 }
 
 
