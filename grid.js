@@ -25,7 +25,13 @@ for(let i=0;i<rows;i++){
     for(let j=0;j<cols;j++){
         let cell=document.createElement("div");
         cell.setAttribute("class","cell");
+
+        //used for cell as well as storage identification
+        cell.setAttribute("rid",i);//row number
+        cell.setAttribute("cid",j);//cell number
+
         cell.setAttribute("contenteditable","true");
+        cell.setAttribute("spellcheck","false");
         rowCont.appendChild(cell);
         addressbarDisplay(cell,i,j);
     }
